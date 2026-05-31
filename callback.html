@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autorisation TikTok — Alex Swing Events</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 600px; margin: 80px auto; padding: 0 20px; text-align: center; color: #333; }
+  h1 { color: #1a1a2e; }
+  .code-box { background: #f0f0f0; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 14px; word-break: break-all; margin: 20px 0; }
+  .success { color: #375623; font-weight: bold; }
+  .error { color: #cc0000; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Alex Swing Events</h1>
+<div id="content">Traitement en cours...</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  const error = params.get('error');
+  const errorDesc = params.get('error_description');
+
+  const div = document.getElementById('content');
+
+  if (code) {
+    div.innerHTML = `
+      <p class="success">✅ Autorisation réussie !</p>
+      <p>Copier ce code et le coller dans le terminal Python :</p>
+      <div class="code-box" id="code-value">${code}</div>
+      <button onclick="navigator.clipboard.writeText('${code}').then(() => this.textContent = 'Copié !')">
+        Copier le code
+      </button>
+    `;
+  } else if (error) {
+    div.innerHTML = `
+      <p class="error">❌ Erreur d'autorisation</p>
+      <p>${errorDesc || error}</p>
+    `;
+  } else {
+    div.innerHTML = '<p>Aucun paramètre reçu.</p>';
+  }
+</script>
+</body>
+</html>
