@@ -1,38 +1,123 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conditions d'utilisation — Alex Swing Events</title>
+<title>Terms of Service — Alex Swing Events Publications</title>
 <style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-  h1 { color: #1a1a2e; }
-  h2 { color: #2e75b6; }
-  nav a { margin-right: 20px; color: #2e75b6; text-decoration: none; }
-  footer { margin-top: 60px; color: #888; font-size: 0.9em; border-top: 1px solid #eee; padding-top: 20px; }
+  body { font-family: Arial, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 24px; color: #222; line-height: 1.7; }
+  h1 { color: #1a1a2e; font-size: 1.8em; border-bottom: 2px solid #2e75b6; padding-bottom: 10px; }
+  h2 { color: #2e75b6; font-size: 1.2em; margin-top: 32px; }
+  p, li { font-size: 0.97em; }
+  ul { padding-left: 20px; }
+  nav a { margin-right: 16px; color: #2e75b6; text-decoration: none; font-size: 0.9em; }
+  .meta { color: #888; font-size: 0.88em; margin-bottom: 28px; }
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; color: #888; font-size: 0.85em; }
+  .highlight { background: #f0f6ff; border-left: 4px solid #2e75b6; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
 </style>
 </head>
 <body>
-<h1>Conditions d'utilisation</h1>
-<nav><a href="index.html">← Accueil</a></nav>
-<p><em>Dernière mise à jour : 30 mai 2026</em></p>
 
-<h2>1. Objet</h2>
-<p>Les présentes conditions d'utilisation régissent l'utilisation de l'application de publication automatisée de contenus développée par et pour Alex Swing Events.</p>
+<h1>Terms of Service</h1>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy Policy</a>
+</nav>
+<p class="meta">Last updated: June 1, 2026 | Effective date: June 1, 2026</p>
 
-<h2>2. Description du service</h2>
-<p>Cette application est un outil interne permettant la publication automatique de vidéos de concerts et d'événements musicaux sur les réseaux sociaux officiels d'Alex Swing Events (TikTok, Instagram, Facebook, YouTube).</p>
-<p>L'application est réservée à un usage exclusivement interne par Alex Swing Events.</p>
+<div class="highlight">
+  These Terms of Service govern your use of the <strong>Alex Swing Events Publications</strong> application ("the App"), a social media management tool for live music event organizers. By using the App, you agree to these terms.
+</div>
 
-<h2>3. Propriété intellectuelle</h2>
-<p>L'ensemble des contenus publiés (vidéos, images, textes) sont la propriété exclusive d'Alex Swing Events ou font l'objet d'autorisations appropriées de la part des artistes concernés.</p>
+<h2>1. Description of Service</h2>
+<p>Alex Swing Events Publications is a web-based social media management application that enables live music event organizers and promoters to:</p>
+<ul>
+  <li>Connect their social media accounts (TikTok, Instagram, Facebook, YouTube) via official OAuth 2.0 authorization</li>
+  <li>Schedule and automatically publish short-form video content (event highlights, concert clips, artist showcases) to their connected accounts</li>
+  <li>Manage publication workflows through a structured content pipeline</li>
+</ul>
+<p>The App publishes content exclusively to accounts that have explicitly authorized the App through the respective platform's official authorization flow.</p>
 
-<h2>4. Responsabilité</h2>
-<p>Alex Swing Events s'engage à respecter les conditions d'utilisation des plateformes de réseaux sociaux sur lesquelles les contenus sont publiés, notamment TikTok, Instagram, Facebook et YouTube.</p>
+<h2>2. User Eligibility</h2>
+<p>To use the App, you must:</p>
+<ul>
+  <li>Be the owner or authorized administrator of the social media account(s) you connect to the App</li>
+  <li>Have the legal right to publish the video content you submit through the App</li>
+  <li>Comply with the Terms of Service of each connected platform (TikTok, Instagram, Facebook, YouTube)</li>
+  <li>Be at least 18 years of age or the age of legal majority in your jurisdiction</li>
+</ul>
 
-<h2>5. Contact</h2>
-<p><a href="mailto:alex.swing.events@gmail.com">alex.swing.events@gmail.com</a></p>
+<h2>3. Authorization and Account Access</h2>
+<p>When you connect a social media account to the App, you grant the App permission to:</p>
+<ul>
+  <li>Verify your account identity using the <code>user.info.basic</code> scope</li>
+  <li>Publish video content to your account on your behalf using the <code>video.publish</code> scope (TikTok) or equivalent scopes on other platforms</li>
+</ul>
+<p>You may revoke this authorization at any time through the settings of each respective platform.</p>
 
-<footer>© 2026 Alex Swing Events — Paris, France</footer>
+<h2>4. Content Responsibility</h2>
+<p>You are solely responsible for all video content published through the App. You represent and warrant that:</p>
+<ul>
+  <li>You own or have obtained all necessary rights, licenses, and permissions for the content you publish</li>
+  <li>The content does not infringe any third-party intellectual property rights, including music rights, image rights, or performers' rights</li>
+  <li>The content complies with all applicable laws and the content policies of each connected platform</li>
+  <li>The content does not contain harmful, misleading, or illegal material</li>
+</ul>
+
+<h2>5. Data Usage</h2>
+<p>The App processes the following data:</p>
+<ul>
+  <li><strong>Account identifiers</strong> (user ID, username): used solely to direct publications to the correct account</li>
+  <li><strong>Access tokens</strong>: stored securely and used exclusively to authenticate API requests on your behalf</li>
+  <li><strong>Video files</strong>: temporarily processed for upload; not retained on App servers after successful publication</li>
+  <li><strong>Publication metadata</strong> (title, description, scheduled time): stored in your local configuration files only</li>
+</ul>
+<p>The App does not sell, rent, or share your data or your followers' data with any third party. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+
+<h2>6. Prohibited Uses</h2>
+<p>You agree not to use the App to:</p>
+<ul>
+  <li>Publish content that violates the Terms of Service of any connected platform</li>
+  <li>Automate spam, coordinated inauthentic behavior, or any activity that manipulates platform algorithms</li>
+  <li>Publish content on behalf of accounts you do not own or are not authorized to manage</li>
+  <li>Circumvent platform rate limits or technical restrictions</li>
+</ul>
+
+<h2>7. Platform Compliance</h2>
+<p>The App operates in full compliance with official developer policies:</p>
+<ul>
+  <li><strong>TikTok</strong>: TikTok Developer Terms of Service and Content Posting API guidelines</li>
+  <li><strong>Meta (Instagram, Facebook)</strong>: Meta Platform Terms and Graph API Terms of Service</li>
+  <li><strong>YouTube</strong>: YouTube API Services Terms of Service</li>
+</ul>
+<p>The App's use of TikTok API Services is subject to TikTok's <a href="https://www.tiktok.com/legal/page/global/terms-of-service/en" target="_blank">Terms of Service</a>.</p>
+
+<h2>8. Intellectual Property</h2>
+<p>You retain full ownership of all video content you publish through the App. The App does not claim any ownership rights over your content.</p>
+
+<h2>9. Disclaimer of Warranties</h2>
+<p>The App is provided "as is" without warranties of any kind. We do not guarantee uninterrupted service, as availability depends on third-party APIs which may change at any time.</p>
+
+<h2>10. Limitation of Liability</h2>
+<p>To the maximum extent permitted by applicable law, Alex Swing Events shall not be liable for any indirect, incidental, or consequential damages arising from your use of the App.</p>
+
+<h2>11. Changes to These Terms</h2>
+<p>We may update these Terms from time to time. Changes will be posted on this page with an updated effective date.</p>
+
+<h2>12. Governing Law</h2>
+<p>These Terms are governed by the laws of France. Any disputes shall be subject to the jurisdiction of the courts of Paris, France.</p>
+
+<h2>13. Contact</h2>
+<ul>
+  <li>Email: <a href="mailto:alex.swing.events@gmail.com">alex.swing.events@gmail.com</a></li>
+  <li>Website: <a href="https://cadenza-association.github.io/alex-swing-events-site/">cadenza-association.github.io/alex-swing-events-site</a></li>
+</ul>
+
+<footer>
+  &copy; 2026 Alex Swing Events &mdash; Paris, France &nbsp;|&nbsp;
+  <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+  <a href="index.html">Home</a>
+</footer>
+
 </body>
 </html>
