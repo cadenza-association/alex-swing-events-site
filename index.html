@@ -3,27 +3,241 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex Swing Events</title>
+<title>Alex Swing Events — Jazz & Musique Live à Paris</title>
+<meta name="description" content="Alex Swing Events — Concerts de jazz et musique live à Paris 6e, Chez Georges et La Rhumerie.">
 <style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-  h1 { color: #1a1a2e; }
-  nav a { margin-right: 20px; color: #2e75b6; text-decoration: none; }
-  footer { margin-top: 60px; color: #888; font-size: 0.9em; border-top: 1px solid #eee; padding-top: 20px; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Georgia', serif;
+    background: #0e0e0e;
+    color: #f0ead8;
+  }
+
+  /* ── HEADER ── */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px 32px;
+    background: #111;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  header img.logo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 2em;
+    letter-spacing: 0.08em;
+    color: #d4a44c;
+    text-align: center;
+  }
+
+  header p.tagline {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #aaa;
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px;
+    background: #111;
+  }
+
+  nav a {
+    color: #d4a44c;
+    text-decoration: none;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  nav a:hover { text-decoration: underline; }
+
+  /* ── INTRO ── */
+  .intro {
+    max-width: 760px;
+    margin: 48px auto;
+    padding: 0 24px;
+    text-align: center;
+    line-height: 1.8;
+    color: #ccc;
+    font-size: 1.05em;
+  }
+
+  .intro strong { color: #d4a44c; }
+
+  /* ── LIEUX ── */
+  .lieux {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 760px;
+    margin: 32px auto;
+    padding: 0 24px;
+  }
+
+  .lieu-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 20px 28px;
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .lieu-card h3 { color: #d4a44c; margin-bottom: 8px; font-size: 1.1em; }
+  .lieu-card p { color: #aaa; font-size: 0.9em; line-height: 1.6; }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    text-align: center;
+    font-size: 1.4em;
+    color: #d4a44c;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 48px 0 24px;
+  }
+
+  /* ── GRILLE CONCERTS ── */
+  .concerts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto 64px;
+    padding: 0 24px;
+  }
+
+  .concert-card img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.2s;
+  }
+
+  .concert-card img:hover { transform: scale(1.02); }
+
+  /* ── SOCIAL ── */
+  .social {
+    text-align: center;
+    padding: 32px 24px 48px;
+    background: #111;
+    border-top: 1px solid #2a2a2a;
+  }
+
+  .social p { color: #aaa; margin-bottom: 16px; font-size: 0.95em; }
+
+  .social-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+  .social-links a {
+    color: #d4a44c;
+    text-decoration: none;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid #d4a44c;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .social-links a:hover { background: #d4a44c; color: #111; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: #555;
+    font-size: 0.8em;
+    background: #0e0e0e;
+  }
+
+  footer a { color: #555; text-decoration: none; }
+  footer a:hover { color: #d4a44c; }
 </style>
 </head>
 <body>
-<h1>Alex Swing Events</h1>
+
+<header>
+  <img src="images/Alex_Swing_Events.jpeg" alt="Alex Swing Events" class="logo">
+  <h1>Alex Swing Events</h1>
+  <p class="tagline">Jazz & Musique Live à Paris</p>
+</header>
+
 <nav>
   <a href="index.html">Accueil</a>
-  <a href="privacy.html">Politique de confidentialité</a>
-  <a href="terms.html">Conditions d'utilisation</a>
+  <a href="privacy.html">Confidentialité</a>
+  <a href="terms.html">CGU</a>
 </nav>
-<hr>
-<p>Alex Swing Events est une organisation de programmation de concerts de jazz et de musique live à Paris.</p>
-<p>Nous organisons des soirées musicales dans des lieux emblématiques parisiens tels que Chez Georges (Paris 6e) et La Rhumerie (Paris 6e).</p>
-<h2>Contact</h2>
-<p>Email : <a href="mailto:alex.swing.events@gmail.com">alex.swing.events@gmail.com</a></p>
-<p>Instagram : <a href="https://www.instagram.com/alex.swing.events/">@alex.swing.events</a></p>
-<footer>© 2026 Alex Swing Events — Paris, France</footer>
+
+<div class="intro">
+  <p>
+    <strong>Alex Swing Events</strong> propose une programmation de concerts de jazz
+    et de musique live à Paris. Chaque semaine, nous accueillons des musiciens
+    exceptionnels dans des lieux emblématiques de Paris.
+  </p>
+</div>
+
+<div class="lieux">
+  <div class="lieu-card">
+    <h3>Chez Georges</h3>
+    <p>11 rue des Canettes<br>75006 Paris<br><br>Jazz manouche et musique des balkans tous les mardis à 20h, et parfois d'autres jours.<br><br><a href="https://billetterie.yurplan.com/orga/Chez-Georges/24356" target="_blank" style="color:#d4a44c;">Réserver une place</a></p>
+  </div>
+  <div class="lieu-card">
+    <h3>La Rhumerie</h3>
+    <p>166 boulevard Saint-Germain<br>75006 Paris<br><br>Jazz live les dimanches et lundis à 20h.<br>Entrée libre · +1€ par consommation.</p>
+  </div>
+</div>
+
+<h2 class="section-title">Programme — Juin 2026</h2>
+
+<div class="concerts-grid">
+  <div class="concert-card"><img src="images/0106.jpg" alt="Concert 1er juin"></div>
+  <div class="concert-card"><img src="images/0206.jpg" alt="Concert 2 juin"></div>
+  <div class="concert-card"><img src="images/0306.jpg" alt="Concert 3 juin"></div>
+  <div class="concert-card"><img src="images/0706.jpg" alt="Concert 7 juin"></div>
+  <div class="concert-card"><img src="images/0806.jpg" alt="Concert 8 juin"></div>
+  <div class="concert-card"><img src="images/0906.jpg" alt="Concert 9 juin"></div>
+  <div class="concert-card"><img src="images/1406.jpg" alt="Concert 14 juin"></div>
+  <div class="concert-card"><img src="images/1506.jpg" alt="Concert 15 juin"></div>
+  <div class="concert-card"><img src="images/1606.jpg" alt="Concert 16 juin"></div>
+  <div class="concert-card"><img src="images/2206.jpg" alt="Concert 22 juin"></div>
+  <div class="concert-card"><img src="images/2306.jpg" alt="Concert 23 juin"></div>
+  <div class="concert-card"><img src="images/2806.jpg" alt="Concert 28 juin"></div>
+  <div class="concert-card"><img src="images/2906.jpg" alt="Concert 29 juin"></div>
+  <div class="concert-card"><img src="images/3006.jpg" alt="Concert 30 juin"></div>
+</div>
+
+<div class="social">
+  <p>Suivez-nous sur les réseaux sociaux</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/alex.swing.events/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/AlexSwingEvents" target="_blank">Facebook</a>
+    <a href="https://www.youtube.com/@alexswingevents" target="_blank">YouTube</a>
+    <a href="https://www.tiktok.com/@alexswingevents" target="_blank">TikTok</a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Alex Swing Events &mdash; Paris, France &nbsp;|&nbsp;
+  <a href="privacy.html">Politique de confidentialité</a> &nbsp;|&nbsp;
+  <a href="terms.html">CGU</a> &nbsp;|&nbsp;
+  <a href="mailto:alex.swing.events@gmail.com">Contact</a>
+</footer>
+
 </body>
 </html>
